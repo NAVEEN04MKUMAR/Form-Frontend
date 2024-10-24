@@ -6,7 +6,7 @@ import Registerform from './basicform.jsx';
 import { BrowserRouter as Router, Route, Routes,Navigate } from "react-router-dom";
 import Loginform from './loginform.jsx';
 import Userdetails from './Userdetails.jsx';
-
+import Dashboard from './Dashboard.jsx'; 
 
 
 function App() {
@@ -16,6 +16,12 @@ function App() {
     <Router>
       <div>
         <h1>Form</h1>
+        <nav>
+                    <Link to="/register">Register</Link>
+                    <Link to="/login">Login</Link>
+                    <Link to="/userdetails">User Details</Link>
+                    <Link to="/dashboard">Dashboard</Link>
+                </nav>
         <Routes>
           <Route path="/register" element={<Registerform />} />
           <Route path="/" element={<Navigate to="/register" />} />
